@@ -1,13 +1,25 @@
 <template lang="">
   <div>
-    <button type="button">-</button>
+    <button type="button" @click="decrement">-</button>
 
-    <span> Current value: 0 </span>
+    <span> Current value: {{ count }} </span>
 
-    <button>+</button>
+    <button type="button" @click="increment">+</button>
   </div>
 </template>
-<script>
-export default {};
+<script setup>
+import { ref } from "vue";
+
+const count = ref(0);
+
+// Метод уменьшения значения
+const decrement = () => {
+  count.value = count.value - 1;
+};
+
+// Метод увеличения значения
+const increment = () => {
+  count.value = count.value + 1;
+};
 </script>
 <style lang=""></style>
