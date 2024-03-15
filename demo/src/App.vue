@@ -1,7 +1,12 @@
 <template>
+  тест
+  <app-layout>
+    <home-view />
+  </app-layout>
   <router-view />
 </template>
 
+<script setup></script>
 <style>
 * {
   padding: 0;
